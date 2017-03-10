@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{YYYY-MM-dd HH:mm:ss.SSS} %-5level - %msg [%logger]%n"/>
+        </Console>
+
+        <RollingFile name="File"
+                     fileName="./log/releasecrawler.log"
+                     filePattern="./log/releasecrawler-%d{yyyy-MM-dd}.log"
+                     bufferedIO="true"
+                     immediateFlush="true">
+            <PatternLayout pattern="%d{YYYY-MM-dd HH:mm:ss.SSS} %-5level - %msg [%logger]%n"/>
+            <DefaultRolloverStrategy max="30"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+
+        <RollingFile name="FileErrors"
+                     fileName="./log/releasecrawler-errors.log"
+                     filePattern="./log/releasecrawler-errors-%d{yyyy-MM-dd}.log"
+                     bufferedIO="true"
+                     immediateFlush="true">
+            <PatternLayout pattern="%d{YYYY-MM-dd HH:mm:ss.SSS} %-5level - %msg [%logger]%n"/>
+            <DefaultRolloverStrategy max="30" />
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+
+        <RollingFile name="FileDebug"
+                     fileName="./log/releasecrawler-debug.log"
+                     filePattern="./log/releasecrawler-debug-%i.log"
+                     bufferedIO="true"
+                     immediateFlush="true">
+            <PatternLayout pattern="%d{YYYY-MM-dd HH:mm:ss.SSS} %-5level - %msg [%logger]%n"/>
+            <DefaultRolloverStrategy max="10" />
+            <Policies>
+                <SizeBasedTriggeringPolicy size="200 MB" />
+            </Policies>
+        </RollingFile>
+
+    </Appenders>
+
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="Console" level="debug" />
+            <AppenderRef ref="File" level="info" />
+            <AppenderRef ref="FileErrors" level="error" />
+            <AppenderRef ref="FileDebug" level="debug" />
+        </Root>
+
+    </Loggers>
+</Configuration>
