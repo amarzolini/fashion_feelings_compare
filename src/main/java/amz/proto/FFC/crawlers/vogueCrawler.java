@@ -11,8 +11,12 @@ import org.elasticsearch.transport.client.PreBuiltTransportClient;
 import org.json.JSONWriter;
 import org.jsoup.nodes.Document;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.StringWriter;
 import java.net.InetSocketAddress;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 
 
@@ -31,21 +35,32 @@ public class vogueCrawler extends CommonCrawler {
 
         String magazine = "Vogue";
 
-        String imageurl = "";
+        String imageurl = webPage.select("img.lazy").first().attr("abs:data-original").trim().toString();
 
         result.magazine = magazine;
-
-        //TODO: get the url of the image using css selector
         result.imageurl = imageurl;
+
+        App.LOG.debug("Magazine: " + result.magazine);
+        App.LOG.debug("URL of the picture: " + result.imageurl);
 
         return result;
     }
 
+    public void DownloadPicture(String url) throws IOException{
+        URL location = vogueCrawler.class.getProtectionDomain().getCodeSource().getLocation();
+        try(InputStream in = new URL(url).openStream()){
+            //Files.copy(in, Paths.get(location.getFile().toString() + "/out"));
+            //TODO:Make a configuration file with the path
+        }
+    }
+
     public void Main(){
-        String url = "vogue.fr";
+        String url = "http://www.vogue.fr/mode";
+        FashionModel image = new FashionModel();
         //TODO: make a conf file (json)
         try {
-            GetPicture(url);
+            image = GetPicture(url);
+            DownloadPicture(image.imageurl);
         } catch (IOException e) {
             e.printStackTrace();
         }

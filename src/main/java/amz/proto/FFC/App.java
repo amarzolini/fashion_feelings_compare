@@ -5,11 +5,14 @@ package amz.proto.FFC;
 import amz.proto.FFC.crawlers.*;
 import amz.proto.FFC.model.FashionModel;
 import amz.proto.FFC.util.*;
+import amz.proto.FFC.vision.FaceDetection;
+import com.drew.metadata.Face;
+import com.google.cloud.vision.spi.v1.ImageAnnotatorClient;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
+import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,15 +33,19 @@ public class App {
     private String ConfigFile = "ffc.cfg";
     public static CCConfig CONFIG;
 
+    private ByteArrayOutputStream bout;
+    private PrintStream out;
+
+
+
     //*** MODEL
     protected vogueCrawler vogueCrawler = new vogueCrawler();
-
+    protected FaceDetection FaceDetection;
 
     /**
      *
      */
     public App() {
-
     }
 
     /**
@@ -54,7 +61,7 @@ public class App {
     /**
      * Initialization of the service
      */
-    public void init() {
+    public void init() throws Exception{
 
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
 
@@ -64,7 +71,13 @@ public class App {
         //***  LOAD CONFIGURATION FILE
         //***
         this.CONFIG = new CCConfig(ConfigFile);
+        GoogleCredential credential = GoogleCredential.getApplicationDefault();
+        /*Compute compute = new Compute.Builder
+                (transport, jsonFactory, credential).build();*/
 
+        bout = new ByteArrayOutputStream();
+        out = new PrintStream(bout);
+        FaceDetection = new FaceDetection(ImageAnnotatorClient.create());
     }
 
 

@@ -7,7 +7,7 @@ public class Main {
     private String[] mArgs;
 
 
-    public static void main( String[] args ) {
+    public static void main( String[] args ) throws Exception {
         String ConfigFile = "FFC.cfg";
         App application = new App(ConfigFile);
         application.init();
