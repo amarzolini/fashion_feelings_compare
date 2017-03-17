@@ -11,7 +11,7 @@ public class Main {
         String ConfigFile = "FFC.cfg";
         App application = new App(ConfigFile);
         application.init();
-        application.run();
+        application.run(args);
         application.stop();
     }
 

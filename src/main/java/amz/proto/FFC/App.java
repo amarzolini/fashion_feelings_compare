@@ -13,7 +13,24 @@ import org.apache.commons.csv.CSVRecord;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
+import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
+import com.google.api.client.json.JsonFactory;
+import com.google.api.client.json.jackson2.JacksonFactory;
+import com.google.api.services.vision.v1.Vision;
+import com.google.api.services.vision.v1.VisionScopes;
+import com.google.api.services.vision.v1.model.AnnotateImageRequest;
+import com.google.api.services.vision.v1.model.AnnotateImageResponse;
+import com.google.api.services.vision.v1.model.BatchAnnotateImagesRequest;
+import com.google.api.services.vision.v1.model.BatchAnnotateImagesResponse;
+import com.google.api.services.vision.v1.model.FaceAnnotation;
+import com.google.api.services.vision.v1.model.Feature;
+import com.google.api.services.vision.v1.model.Image;
+import com.google.api.services.vision.v1.model.Vertex;
+import com.google.common.collect.ImmutableList;
 import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TimeZone;
@@ -27,16 +44,13 @@ public class App {
     //*** CONSTANTS
     public static final String APPNAME = "Prototype - Fashion Feelings Crawler (CC)";
     public static final String VERSION = "0.1";
+    public static final String TARGET_URL = "https://vision.googleapis.com/v1/images:annotate?";
+    public static String API_KEY = "key=";
 
-    //*** HELPER OBJECTSw
+    //*** HELPER OBJECTS
     public static Logger LOG = LogManager.getLogger("Application");
     private String ConfigFile = "ffc.cfg";
     public static CCConfig CONFIG;
-
-    private ByteArrayOutputStream bout;
-    private PrintStream out;
-
-
 
     //*** MODEL
     protected vogueCrawler vogueCrawler = new vogueCrawler();
@@ -70,23 +84,21 @@ public class App {
         //***
         //***  LOAD CONFIGURATION FILE
         //***
-        this.CONFIG = new CCConfig(ConfigFile);
-        GoogleCredential credential = GoogleCredential.getApplicationDefault();
-        /*Compute compute = new Compute.Builder
-                (transport, jsonFactory, credential).build();*/
-
-        bout = new ByteArrayOutputStream();
-        out = new PrintStream(bout);
-        FaceDetection = new FaceDetection(ImageAnnotatorClient.create());
+       // this.CONFIG = new CCConfig(ConfigFile);
     }
-
 
     /**
      * Start the service
      */
-    public void run() {
-
+    public void run(String[] args) throws IOException, GeneralSecurityException {
+        if(args.length != 4){
+            App.LOG.debug("Argument(s) missing");
+            App.LOG.debug("Usage: <path of the image> <name of the image> <path of the json file> <API_KEY>");
+            return;
+        }
+        API_KEY += args[3];
         vogueCrawler.Main();
+        FaceDetection.Main(args);
     }
 
     /**

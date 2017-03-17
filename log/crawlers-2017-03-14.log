@@ -1,0 +1,4 @@
+2017-03-14 10:30:04.766 INFO  - ###### BOOTING Prototype - Fashion Feelings Crawler (CC) - Version 0.1 ###### [Application]
+2017-03-14 10:30:04.836 FATAL - ***** ERROR: CONFIGURATION FILE FFC.cfgNOT FOUND ***** [Application]
+2017-03-14 10:37:45.655 INFO  - ###### BOOTING Prototype - Fashion Feelings Crawler (CC) - Version 0.1 ###### [Application]
+2017-03-14 10:37:45.694 FATAL - ***** ERROR: CONFIGURATION FILE FFC.cfg NOT FOUND ***** [Application]

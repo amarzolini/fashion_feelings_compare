@@ -26,10 +26,10 @@ public class FaceDetectionTest extends TestCase {
         super.setUp();
         bout = new ByteArrayOutputStream();
         out = new PrintStream(bout);
-        fixture = new FaceDetection(ImageAnnotatorClient.create());
+        fixture = new FaceDetection();
     }
 
    public void testMain() throws Exception{
-       fixture.detectFaces("C:/Users/Anthony/Desktop/java/fashion_feelings_compare/src/main/java/amz/proto/FFC/out_image/test.jpg", out);
+
    }
 }

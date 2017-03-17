@@ -45,7 +45,7 @@ public class CCConfig {
             }
 
         } catch (ConfigurationException e) {
-            App.LOG.fatal("***** ERROR: CONFIGURATION FILE " + filename + "NOT FOUND *****");
+            App.LOG.fatal("***** ERROR: CONFIGURATION FILE " + filename + " NOT FOUND *****");
             System.err.println("\nFATAL ERROR: CONFIGURATION FILE NOT FOUND");
             System.err.println("--> " + e.getMessage());
             e.printStackTrace();
