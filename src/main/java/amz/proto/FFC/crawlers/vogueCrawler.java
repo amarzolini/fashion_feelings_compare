@@ -3,20 +3,11 @@ package amz.proto.FFC.crawlers;
 import amz.proto.FFC.crawlers.CommonCrawler;
 import amz.proto.FFC.App;
 import amz.proto.FFC.model.FashionModel;
-import org.elasticsearch.action.index.IndexResponse;
-import org.elasticsearch.client.Client;
-import org.elasticsearch.common.settings.Settings;
-import org.elasticsearch.common.transport.InetSocketTransportAddress;
-import org.elasticsearch.transport.client.PreBuiltTransportClient;
-import org.json.JSONWriter;
+import amz.proto.FFC.vision.FaceDetection;
 import org.jsoup.nodes.Document;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.StringWriter;
-import java.net.InetSocketAddress;
+
+import java.io.*;
 import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.*;
 
 
@@ -28,6 +19,10 @@ public class vogueCrawler extends CommonCrawler {
     public vogueCrawler(){
     }
 
+    /**
+     *
+     * @param url
+     */
     public FashionModel GetPicture(String url) throws IOException{
         Document webPage;
         FashionModel result = new FashionModel();
@@ -46,21 +41,39 @@ public class vogueCrawler extends CommonCrawler {
         return result;
     }
 
-    public void DownloadPicture(String url) throws IOException{
-        URL location = vogueCrawler.class.getProtectionDomain().getCodeSource().getLocation();
-        try(InputStream in = new URL(url).openStream()){
-            //Files.copy(in, Paths.get(location.getFile().toString() + "/out"));
-            //TODO:Make a configuration file with the path
+    /**
+     *
+     * @param url
+     */
+    public String EncodeImage(String url) throws IOException{
+        try{
+            URL imageurl = new URL(url);
+            BufferedInputStream ImageToEncode = new BufferedInputStream(imageurl.openConnection().getInputStream());
+            FileInputStream imageInFile = new FileInputStream(ImageToEncode.toString());
+            byte bytes[] = new byte[2048];
+            imageInFile.read(bytes);
+
+            return Base64.getEncoder().encodeToString(bytes);
         }
+        catch(IOException e){
+
+        }
+        return null;
     }
 
-    public void Main(){
+    /**
+     *
+     * @param args
+     */
+    public void Main(String[] args){
         String url = "http://www.vogue.fr/mode";
         FashionModel image = new FashionModel();
-        //TODO: make a conf file (json)
+        //String ImageString;
+        //TODO: make a conf file (json) containing url of the magazines
         try {
             image = GetPicture(url);
-            DownloadPicture(image.imageurl);
+            //ImageString = EncodeImage(image.imageurl);
+            FaceDetection.Main(args, image);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -2,6 +2,7 @@ package amz.proto.FFC.model;
 
 import amz.proto.FFC.App;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class FashionModel extends CommonModel {
      * @param magazine
      * @param imageurl
      */
-    public FashionModel(String magazine, String imageurl) {
+    public FashionModel(String magazine, String imageurl, URL URL) {
 
         this.magazine   = magazine;
         this.imageurl   = imageurl;

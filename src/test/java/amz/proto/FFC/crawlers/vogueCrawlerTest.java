@@ -34,9 +34,9 @@ public class vogueCrawlerTest extends TestCase {
        result = fixture.GetPicture(url);
    }*/
 
-   public void testMain() throws Exception{
-       fixture.Main();
-   }
+   /*public void testMain() throws Exception{
+       fixture.Main(args);
+   }*/
 
    /*public void testWriteInElasticsearch() throws Exception{
 

@@ -2,27 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b01c409-d92b-4754-be4e-ce8281ece9df" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_apis_google_api_services_vision_v1_rev346_1_22_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_1_3.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_client_google_api_client_1_21_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_client_google_api_client_1_22_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_http_client_google_http_client_jackson2_1_19_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_http_client_google_http_client_jackson2_1_22_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_oauth_client_google_oauth_client_1_21_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_oauth_client_google_oauth_client_1_22_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/amz/proto/FFC/App.class" afterPath="$PROJECT_DIR$/target/classes/amz/proto/FFC/App.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/amz/proto/FFC/Main.class" afterPath="$PROJECT_DIR$/target/classes/amz/proto/FFC/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/amz/proto/FFC/util/CCConfig.class" afterPath="$PROJECT_DIR$/target/classes/amz/proto/FFC/util/CCConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/amz/proto/FFC/crawlers/vogueCrawler.class" afterPath="$PROJECT_DIR$/target/classes/amz/proto/FFC/crawlers/vogueCrawler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/amz/proto/FFC/model/FashionModel.class" afterPath="$PROJECT_DIR$/target/classes/amz/proto/FFC/model/FashionModel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/amz/proto/FFC/vision/FaceDetection.class" afterPath="$PROJECT_DIR$/target/classes/amz/proto/FFC/vision/FaceDetection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/amz/proto/FFC/vision/FaceDetectionTest.class" afterPath="$PROJECT_DIR$/target/test-classes/amz/proto/FFC/vision/FaceDetectionTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/amz/proto/FFC/crawlers/vogueCrawlerTest.class" afterPath="$PROJECT_DIR$/target/test-classes/amz/proto/FFC/crawlers/vogueCrawlerTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FFC.iml" afterPath="$PROJECT_DIR$/FFC.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/crawlers-debug.log" afterPath="$PROJECT_DIR$/log/crawlers-debug.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/crawlers-errors.log" afterPath="$PROJECT_DIR$/log/crawlers-errors.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/crawlers.log" afterPath="$PROJECT_DIR$/log/crawlers.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/amz/proto/FFC/App.java" afterPath="$PROJECT_DIR$/src/main/java/amz/proto/FFC/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/amz/proto/FFC/Main.java" afterPath="$PROJECT_DIR$/src/main/java/amz/proto/FFC/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/amz/proto/FFC/util/CCConfig.java" afterPath="$PROJECT_DIR$/src/main/java/amz/proto/FFC/util/CCConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/amz/proto/FFC/crawlers/vogueCrawler.java" afterPath="$PROJECT_DIR$/src/main/java/amz/proto/FFC/crawlers/vogueCrawler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/amz/proto/FFC/model/FashionModel.java" afterPath="$PROJECT_DIR$/src/main/java/amz/proto/FFC/model/FashionModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/amz/proto/FFC/vision/FaceDetection.java" afterPath="$PROJECT_DIR$/src/main/java/amz/proto/FFC/vision/FaceDetection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/amz/proto/FFC/vision/FaceDetectionTest.java" afterPath="$PROJECT_DIR$/src/test/java/amz/proto/FFC/vision/FaceDetectionTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/amz/proto/FFC/crawlers/vogueCrawlerTest.java" afterPath="$PROJECT_DIR$/src/test/java/amz/proto/FFC/crawlers/vogueCrawlerTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,9 +47,11 @@
       <file leaf-file-name="CCConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/amz/proto/FFC/util/CCConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
+            <state relative-caret-position="748">
               <caret line="47" column="76" lean-forward="false" selection-start-line="47" selection-start-column="76" selection-end-line="47" selection-end-column="76" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,8 +69,8 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/amz/proto/FFC/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="49" column="24" lean-forward="false" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+            <state relative-caret-position="-626">
+              <caret line="23" column="96" lean-forward="false" selection-start-line="23" selection-start-column="96" selection-end-line="23" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -85,8 +79,8 @@
       <file leaf-file-name="vogueCrawler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/amz/proto/FFC/crawlers/vogueCrawler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="986">
+              <caret line="66" column="4" lean-forward="false" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -95,11 +89,9 @@
       <file leaf-file-name="FaceDetection.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/amz/proto/FFC/vision/FaceDetection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="41" column="8" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="89" column="52" lean-forward="true" selection-start-line="89" selection-start-column="52" selection-end-line="89" selection-end-column="52" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,8 +99,18 @@
       <file leaf-file-name="vogueCrawlerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/amz/proto/FFC/crawlers/vogueCrawlerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="510">
+              <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FashionModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/amz/proto/FFC/model/FashionModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-272">
+              <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -159,16 +161,16 @@
         <option value="$PROJECT_DIR$/src/main/java/amz/proto/FFC/model/ReleaseModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/amz/proto/FFC/util/CCHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/amz/proto/FFC/crawlers/CommonCrawler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/amz/proto/FFC/model/FashionModel.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/amz/proto/FFC/crawlers/vogueCrawlerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/amz/proto/FFC/crawlers/vogueCrawler.java" />
         <option value="$PROJECT_DIR$/src/test/java/amz/proto/FFC/crawlers/FaceDetectionTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/amz/proto/FFC/Main.java" />
         <option value="$PROJECT_DIR$/src/test/java/amz/proto/FFC/vision/FaceDetectionTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/amz/proto/FFC/util/CCConfig.java" />
+        <option value="$PROJECT_DIR$/src/test/java/amz/proto/FFC/crawlers/vogueCrawlerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/amz/proto/FFC/model/FashionModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/amz/proto/FFC/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/amz/proto/FFC/crawlers/vogueCrawler.java" />
         <option value="$PROJECT_DIR$/src/main/java/amz/proto/FFC/vision/FaceDetection.java" />
       </list>
     </option>
@@ -396,15 +398,45 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fashion_feelings_compare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fashion_feelings_compare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FFC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="crawlers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -422,7 +454,7 @@
       </extension>
       <option name="MAIN_CLASS_NAME" value="amz.proto.FFC.Main" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/src/main/java/amz/proto/FFC/out_image/test1.jpg test1.jpg $PROJECT_DIR$/src/main/java/amz/proto/FFC/vision/out/immatest.json AIzaSyAgmYucWN_1v6Z7GcAfv8IaE-ds-1jN7Ho" />
+      <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/src/main/java/amz/proto/FFC/vision/out/ AIzaSyAgmYucWN_1v6Z7GcAfv8IaE-ds-1jN7Ho $PROJECT_DIR$/src/main/java/amz/proto/FFC/out_image/test1.jpg" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -806,7 +838,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -818,7 +850,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -862,9 +894,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="62" column="27" lean-forward="false" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -936,9 +966,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="62" column="27" lean-forward="false" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,9 +1038,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1160,35 +1186,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/amz/proto/FFC/model/FashionModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="76" column="33" lean-forward="false" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/amz/proto/FFC/crawlers/FaceDetectionTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/amz/proto/FFC/crawlers/CommonCrawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1428">
           <caret line="84" column="20" lean-forward="false" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/amz/proto/FFC/vision/FaceDetectionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="28" column="38" lean-forward="false" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1200,18 +1202,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/amz/proto/FFC/crawlers/vogueCrawlerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/amz/proto/FFC/util/CCConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="748">
+          <caret line="47" column="76" lean-forward="false" selection-start-line="47" selection-start-column="76" selection-end-line="47" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/amz/proto/FFC/util/CCConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/amz/proto/FFC/vision/FaceDetectionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="47" column="76" lean-forward="false" selection-start-line="47" selection-start-column="76" selection-end-line="47" selection-end-column="76" />
+        <state relative-caret-position="306">
+          <caret line="28" column="38" lean-forward="false" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1224,29 +1228,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/amz/proto/FFC/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/amz/proto/FFC/crawlers/vogueCrawler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="49" column="24" lean-forward="false" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+        <state relative-caret-position="986">
+          <caret line="66" column="4" lean-forward="false" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/amz/proto/FFC/crawlers/vogueCrawler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/amz/proto/FFC/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="-626">
+          <caret line="23" column="96" lean-forward="false" selection-start-line="23" selection-start-column="96" selection-end-line="23" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/amz/proto/FFC/crawlers/CommonCrawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/amz/proto/FFC/model/FashionModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/amz/proto/FFC/crawlers/vogueCrawlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/amz/proto/FFC/vision/FaceDetection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="41" column="8" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="89" column="52" lean-forward="true" selection-start-line="89" selection-start-column="52" selection-end-line="89" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
