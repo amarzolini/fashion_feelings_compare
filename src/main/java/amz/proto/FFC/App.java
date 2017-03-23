@@ -68,15 +68,17 @@ public class App {
      * Start the service
      */
     public void run(String[] args) throws IOException, GeneralSecurityException {
-        if(args.length != 3){
+        if(args.length != 2){
             App.LOG.debug("Argument(s) missing");
-            App.LOG.debug("Usage: <path of the json folder> <API_KEY> <path of the images folder");
+            App.LOG.debug("Usage: <path of the json folder> <API_KEY>");
             return;
         }
         API_KEY += args[1];
+
         vogueCrawler.Main(args);
         elleCrawler.Main(args);
         graziaCrawler.Main(args);
+
         stop();
     }
 

@@ -29,19 +29,19 @@ public class FaceDetection{
      *
      * @param args
      * @param FashionResult
+     * @param ImageString
      */
-    public static void Main(String[] args, FashionModel FashionResult) throws IOException{
-        MakeUrlObject(args, FashionResult);
+    public static void Main(String[] args, FashionModel FashionResult, String ImageString) throws IOException{
+        MakeUrlObject(args, FashionResult, ImageString);
     }
 
     /**
      *
      * @param args
      * @param FashionResult
+     * @param ImageString
      */
-    public static void MakeUrlObject(String[] args, FashionModel FashionResult) throws IOException{ //Make the request
-        String ImageString;
-        ImageString = EncodeImage(args); //Encode the image
+    public static void MakeUrlObject(String[] args, FashionModel FashionResult, String ImageString) throws IOException{ //Make the request
 
         URL serverUrl = new URL(TARGET_URL + API_KEY); //Make the URL
         URLConnection urlConnection = serverUrl.openConnection();
@@ -76,22 +76,6 @@ public class FaceDetection{
         JSONObject JSONresponse = new JSONObject(resp);
         httpResponseScanner.close();
         MakeFile(args, JSONresponse, FashionResult); //Write the response into a JSON file (we need to specify the path into the configuration)
-    }
-
-    /**
-     *
-     * @param args
-     */
-    public static String EncodeImage(String[] args) throws IOException{ //Encode the image in Base64 and return the String
-        File File = new File(args[2]); //We need to specify the path of image in the configuration
-        String ImageString;
-
-        FileInputStream fileInputStreamReader = new FileInputStream(File);
-        byte[] bytes = new byte[(int)File.length()];
-        fileInputStreamReader.read(bytes);
-        ImageString = Base64.getEncoder().encodeToString(bytes);
-
-        return ImageString;
     }
 
     /**

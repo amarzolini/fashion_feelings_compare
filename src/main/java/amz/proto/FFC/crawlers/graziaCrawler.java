@@ -5,6 +5,7 @@ import amz.proto.FFC.App;
 import amz.proto.FFC.model.FashionModel;
 import amz.proto.FFC.vision.FaceDetection;
 import org.jsoup.nodes.Document;
+import sun.misc.IOUtils;
 
 import java.io.*;
 import java.net.URL;
@@ -44,19 +45,12 @@ public class graziaCrawler extends CommonCrawler {
      *
      * @param url
      */
-    public String EncodeImage(String url) throws IOException{ //TODO: improve that and make it WORKS !
+    public String EncodeImage(String url) throws IOException{ //Encode the image in Base64 and return the String
         try{
-            URL imageurl = new URL(url);
-            BufferedInputStream ImageToEncode = new BufferedInputStream(imageurl.openConnection().getInputStream());
-            FileInputStream imageInFile = new FileInputStream(ImageToEncode.toString());
-            byte bytes[] = new byte[2048];
-            imageInFile.read(bytes);
-
+            byte[] bytes = org.apache.commons.io.IOUtils.toByteArray(new URL(url));
             return Base64.getEncoder().encodeToString(bytes);
         }
-        catch(IOException e){
-
-        }
+        catch(IOException e){}
         return null;
     }
 
@@ -67,12 +61,16 @@ public class graziaCrawler extends CommonCrawler {
     public void Main(String[] args){
         String url = "http://www.grazia.fr/";
         FashionModel image = new FashionModel();
-        //String ImageString;
+        String ImageString;
         //TODO: make a conf file containing url of the magazines
         try {
             image = GetPicture(url);
-            //ImageString = EncodeImage(image.imageurl);
-            FaceDetection.Main(args, image);
+            if(image.imageurl != null) {
+                ImageString = EncodeImage(image.imageurl);
+                FaceDetection.Main(args, image, ImageString);
+            }
+            else{return;}
+
         } catch (IOException e) {
             e.printStackTrace();
         }
