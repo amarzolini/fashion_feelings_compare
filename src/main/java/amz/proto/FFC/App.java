@@ -30,8 +30,9 @@ public class App {
     public static CCConfig CONFIG;
 
     //*** MODEL
-    protected vogueCrawler vogueCrawler = new vogueCrawler();
-
+    protected vogueCrawler vogueCrawler   = new vogueCrawler();
+    protected elleCrawler elleCrawler     = new elleCrawler();
+    protected graziaCrawler graziaCrawler = new graziaCrawler();
     /**
      *
      */
@@ -74,6 +75,8 @@ public class App {
         }
         API_KEY += args[1];
         vogueCrawler.Main(args);
+        elleCrawler.Main(args);
+        graziaCrawler.Main(args);
         stop();
     }
 
