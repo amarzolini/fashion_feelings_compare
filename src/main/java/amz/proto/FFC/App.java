@@ -33,6 +33,7 @@ public class App {
     protected vogueCrawler vogueCrawler   = new vogueCrawler();
     protected elleCrawler elleCrawler     = new elleCrawler();
     protected graziaCrawler graziaCrawler = new graziaCrawler();
+    protected wCrawler wCrawler           = new wCrawler();
     /**
      *
      */
@@ -78,6 +79,7 @@ public class App {
         vogueCrawler.Main(args);
         elleCrawler.Main(args);
         graziaCrawler.Main(args);
+        wCrawler.Main(args);
 
         stop();
     }
