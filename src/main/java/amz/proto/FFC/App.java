@@ -26,8 +26,8 @@ public class App {
 
     //*** HELPER OBJECTS
     public static Logger LOG = LogManager.getLogger("Application");
-    private String ConfigFile = "ffc.cfg";
-    public static CCConfig CONFIG;
+    private String ConfigFile = "FFC.cfg";
+    public static config CONFIG;
 
     //*** MODEL
     protected vogueCrawler vogueCrawler   = new vogueCrawler();
@@ -57,21 +57,20 @@ public class App {
 
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
 
+        CONFIG = new config(ConfigFile);
+
         LOG.info("###### BOOTING " + APPNAME + " - Version " + VERSION + " ######");
 
-        //***
-        //***  LOAD CONFIGURATION FILE
-        //***
-       // this.CONFIG = new CCConfig(ConfigFile);
     }
 
     /**
      * Start the service
      */
     public void run(String[] args) throws IOException, GeneralSecurityException {
+
         if(args.length != 2){
             App.LOG.debug("Argument(s) missing");
-            App.LOG.debug("Usage: <path of the json folder> <API_KEY>");
+            App.LOG.debug("Usage: <path of the json folder>");
             return;
         }
         API_KEY += args[1];

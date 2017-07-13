@@ -5,17 +5,19 @@ import org.apache.commons.configuration.Configuration;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
 
+import static amz.proto.FFC.App.*;
+
 /**
- * Created by amarzolini (based on lgradassi's work) on 10.03.2017.
+ * Created by amarzolini 13.07.2017.
  */
-public class CCConfig {
+public class config {
 
 
     protected boolean   debugMode = false;
     protected int       connectionTimeout = 30000;
     protected int       waitingTime = 5000;
 
-    public CCConfig(String filename) {
+    public config(String filename) {
 
         Configuration conf;
 
@@ -29,19 +31,13 @@ public class CCConfig {
             conf = new PropertiesConfiguration(filename);
 
             App.LOG.debug("Reading configuration file");
-            if(conf.containsKey("debug_mode")) {
-                this.debugMode = conf.getBoolean("debug_mode");
-                App.LOG.debug("Reading debug_mode: "+this.debugMode);
-            }
 
-            if(conf.containsKey("connection_timeout_ms")) {
-                this.connectionTimeout = conf.getInt("connection_timeout_ms");
-                App.LOG.debug("Reading connection timeout: "+this.connectionTimeout);
+            if(conf.containsKey("API_KEY")){
+                API_KEY += conf.getString("API_KEY");
             }
-
-            if(conf.containsKey("waiting_time_ms")) {
-                this.waitingTime = conf.getInt("waiting_time_ms");
-                App.LOG.debug("Reading waiting time: "+this.waitingTime);
+            else{
+                System.err.println("FATAL ERROR: API_KEY NOT FOUND");
+                System.exit(1);
             }
 
         } catch (ConfigurationException e) {
